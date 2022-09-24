@@ -8,6 +8,10 @@ Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa 
 
 ### Configurar o Git na máquina
 
+Use os comandos abaixo caso o git fique puto e não te deixe fazer nada sem dar erro:
+
+`git config --global user.name "Fulano de Tal"`
+`git config --global user.email fulanodetal@exemplo.br`
 
 ### Clonar o repositório
 
