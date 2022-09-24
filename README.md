@@ -12,8 +12,10 @@ Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa 
 ### Clonar o repositório
 
 Clone o repositório em um diretório vazio com:
+
 ` git clone https://github.com/Castrozan/Curso-React-Native-App.git `
 
 Em um diretório do projeto, mas desatualizado, puxe as atualizações mais recentes com:
+
 ` git pull https://github.com/Castrozan/Curso-React-Native-App.git `
 
