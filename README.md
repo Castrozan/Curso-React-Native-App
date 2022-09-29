@@ -1,6 +1,6 @@
 # Curso-React-Native-App
-Curso de criação de aplicativo em React Native
 
+Curso de criação de aplicativo em React Native
 
 ## Setup
 
@@ -10,18 +10,17 @@ Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa 
 
 Tendo o Node.js instalado em sua máquina:
 
-```npm install -g expo-cli```
+`npm install -g expo-cli`
 
 Use o comando abaixo para iniciar o projeto:
 
-```npx expo start```
+`npx expo start`
 
 ### Inicializando o projeto
 
 Entre no diretório do projeto pelo SMD ou PowerShell e use:
 
 `npx expo start`
-
 
 ### Configurar o Git na máquina
 
@@ -35,11 +34,11 @@ Use os comandos abaixo caso o git fique puto e não te deixe fazer nada sem dar 
 
 Clone o repositório em um diretório vazio com:
 
-` git clone https://github.com/Castrozan/Curso-React-Native-App.git `
+`git clone https://github.com/Castrozan/Curso-React-Native-App.git`
 
 Em um diretório do projeto, mas desatualizado, puxe as atualizações mais recentes com:
 
-` git pull https://github.com/Castrozan/Curso-React-Native-App.git `
+`git pull https://github.com/Castrozan/Curso-React-Native-App.git`
 
 ### Commitando alterações
 
@@ -67,7 +66,7 @@ Uma outra opção é:
 
 `git commit -a`
 
-Este comando irá abrir um editor de texto no terminal para que você possa adicionar seu comentário mais extenso. Caso o terminal abra o editor de texto vim, chama eu ou o Joel pra ajudar kkkk
+Este comando irá abrir um editor de texto no terminal para que você possa adicionar seu comentário mais extenso. Caso o terminal abra o editor de texto vim e tu não conseguir ecrever, chama eu ou o Joel pra ajudar kkkk
 
 > Atenção! Suas alterações ainda não foram enviadas para o GitHub. O `git commit` apenas salva as alterações que você fez no repositório local da sua máquina.
 
@@ -77,9 +76,7 @@ Utilize o comando abaixo para enviar seu commit para o GitHub
 
 `git push origin zlucas`
 
-#### Agora suas alterações já devem estar registradas no repositório no GitHub. Parabéns! 🎊 
-
-
+#### Agora suas alterações já devem estar registradas no repositório no GitHub. Parabéns! 🎊
 
 ## Instalar o Git Cli
 
@@ -90,9 +87,9 @@ With PowerShell, there is an additional step. You must ensure Get-ExecutionPolic
 
 `Run Get-ExecutionPolicy`
 
-Se voltar como Restricted, rode o comando abaixo: 
+Se voltar como Restricted, rode o comando abaixo:
 
-`Set-ExecutionPolicy AllSigned` 
+`Set-ExecutionPolicy AllSigned`
 
 Now run the following command:
 
