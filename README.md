@@ -51,13 +51,31 @@ Tendo o Node.js instalado em sua máquina:
 
 `npm install -g expo-cli`
 
-Use o comando abaixo para iniciar o projeto:
+To usando o React Native Paper nessa versão, então instale ele. Link abaixo para documentação:
+https://callstack.github.io/react-native-paper/getting-started.html
 
-`npx expo start`
+```npm install react-native-paper@5.0.0-rc.5```
+
+e depois configurar o arquivo `babel.config.js` assim:
+
+```js
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    env: {
+      production: {
+        plugins: ['react-native-paper/babel'],
+      },
+    },
+  };
+};
+```
+
 
 ### Inicializando o projeto
 
-Entre no diretório do projeto pelo SMD ou PowerShell e use:
+Entre no diretório do projeto pelo CMD ou PowerShell e use:
 
 `npx expo start`
 
