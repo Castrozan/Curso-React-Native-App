@@ -72,6 +72,21 @@ module.exports = function(api) {
 };
 ```
 
+To usando o `react-navigation` também, então, pode instalar.
+
+`npm install @react-navigation/native`
+
+E depois:
+
+`npx expo install react-native-screens react-native-safe-area-context`
+
+Na sequencia devemos adicionar também nosso primeiro tipo de "navegador" / "modelo de navegação":
+
+`npm install @react-navigation/native-stack`
+
+Na sequencia recomendo seguirmos este guia aqui:
+
+https://reactnavigation.org/docs/hello-react-navigation
 
 ### Inicializando o projeto
 
