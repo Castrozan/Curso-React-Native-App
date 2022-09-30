@@ -41,6 +41,26 @@ Em um diretório do projeto, mas desatualizado, puxe as atualizações mais rece
 
 `git pull https://github.com/Castrozan/Curso-React-Native-App.git`
 
+## Setup do projeto
+
+Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa e atualizando isso aqui pra que todos tenham as mesmas dependencias na hr de editar o projeto
+
+### Configurando, instalando as dependências do App
+
+Tendo o Node.js instalado em sua máquina:
+
+`npm install -g expo-cli`
+
+Use o comando abaixo para iniciar o projeto:
+
+`npx expo start`
+
+### Inicializando o projeto
+
+Entre no diretório do projeto pelo SMD ou PowerShell e use:
+
+`npx expo start`
+
 ### Commitando alterações
 
 Garanta que você está no branch correto para commitar as alterações. Vamos fazer commit somente em nossa branch pessoal
