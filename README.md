@@ -23,26 +23,6 @@ Por fim instale o Git com:
 
 `choco install git`
 
-## Setup do projeto
-
-Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa e atualizando isso aqui pra que todos tenham as mesmas dependencias na hr de editar o projeto
-
-### Configurando, instalando as dependências do App
-
-Tendo o Node.js instalado em sua máquina:
-
-`npm install -g expo-cli`
-
-Use o comando abaixo para iniciar o projeto:
-
-`npx expo start`
-
-### Inicializando o projeto
-
-Entre no diretório do projeto pelo SMD ou PowerShell e use:
-
-`npx expo start`
-
 ### Configurar o Git na máquina
 
 Use os comandos abaixo caso o git fique puto e não te deixe fazer nada sem dar erro:
@@ -98,3 +78,23 @@ Utilize o comando abaixo para enviar seu commit para o GitHub
 `git push origin zlucas`
 
 #### Agora suas alterações já devem estar registradas no repositório no GitHub. Parabéns! 🎊
+
+## Setup do projeto
+
+Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa e atualizando isso aqui pra que todos tenham as mesmas dependencias na hr de editar o projeto
+
+### Configurando, instalando as dependências do App
+
+Tendo o Node.js instalado em sua máquina:
+
+`npm install -g expo-cli`
+
+Use o comando abaixo para iniciar o projeto:
+
+`npx expo start`
+
+### Inicializando o projeto
+
+Entre no diretório do projeto pelo SMD ou PowerShell e use:
+
+`npx expo start`
