@@ -85,7 +85,7 @@ Primeiro vamos instalar o Chocolatey como gerenciador de pacotes para usar na in
 Install with PowerShell.exe
 With PowerShell, there is an additional step. You must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
 
-`Run Get-ExecutionPolicy`
+`Get-ExecutionPolicy`
 
 Se voltar como Restricted, rode o comando abaixo:
 
