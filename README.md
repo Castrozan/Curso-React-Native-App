@@ -2,7 +2,28 @@
 
 Curso de criação de aplicativo em React Native
 
-## Setup
+## Instalar o Git Cli
+
+Primeiro vamos instalar o Chocolatey como gerenciador de pacotes para usar na instalação do Git
+
+Install with PowerShell.exe
+With PowerShell, there is an additional step. You must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
+
+`Get-ExecutionPolicy`
+
+Se voltar como Restricted, rode o comando abaixo:
+
+`Set-ExecutionPolicy AllSigned`
+
+Now run the following command:
+
+`Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
+
+Por fim instale o Git com:
+
+`choco install git`
+
+## Setup do projeto
 
 Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa e atualizando isso aqui pra que todos tenham as mesmas dependencias na hr de editar o projeto
 
@@ -77,24 +98,3 @@ Utilize o comando abaixo para enviar seu commit para o GitHub
 `git push origin zlucas`
 
 #### Agora suas alterações já devem estar registradas no repositório no GitHub. Parabéns! 🎊
-
-## Instalar o Git Cli
-
-Primeiro vamos instalar o Chocolatey como gerenciador de pacotes para usar na instalação do Git
-
-Install with PowerShell.exe
-With PowerShell, there is an additional step. You must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
-
-`Get-ExecutionPolicy`
-
-Se voltar como Restricted, rode o comando abaixo:
-
-`Set-ExecutionPolicy AllSigned`
-
-Now run the following command:
-
-`Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
-
-Por fim instale o Git com:
-
-`choco install git`
