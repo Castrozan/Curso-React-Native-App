@@ -4,25 +4,26 @@ import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import ListarJogadores from "./components/ListarJogadores"
 
-function HomeScreen({ navigation }) {
+function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      
+
       <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-      <Button mode="contained" onPress={() => navigation.navigate('VisualizarEstatisticas')}>
+      <Button mode="contained" /*onPress={() => navigation.navigate('VisualizarEstatisticas')}*/>
         Ir para Visualizar Estatisticas
       </Button>
 
       <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained" onPress={() => navigation.navigate('ListaJogadores')}>
+      <Button mode="contained" /*onPress={() => navigation.navigate('ListaJogadores')}*/>
         Ir para Lista de Jogadores
       </Button>
 
       <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained" onPress={() => navigation.navigate('CadastroJogador')}>
+      <Button mode="contained" /*onPress={() => navigation.navigate('CadastroJogador')}*/>
         Ir para o Cadastro de Jogador
       </Button>
 
@@ -30,7 +31,7 @@ function HomeScreen({ navigation }) {
   );
 }
 
-function VisualizarEstatisticas({ navigation }) {
+function VisualizarEstatisticas() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{ marginBottom: 16 }}></Text>
@@ -41,23 +42,7 @@ function VisualizarEstatisticas({ navigation }) {
   );
 }
 
-function InfoJogador({ navigation }) {
-  return (
-    <View style={{ flex: 1 }}>
-      <ListarJogadores
-          style={{ borderWidth: 0.5, flex: 2 }}
-          image="https://placekitten.com/390/240"
-          title="Teste do primeiro gatinho"
-        >
-          <Text>Nome do Jogador</Text>
-          <Text>Info do jogardor</Text>
-        </ListarJogadores>
-        
-    </View>
-  );
-}
-
-function CadastroJogador({ navigation }) {
+function CadastroJogador() {
 
   const [Nome, setNome] =   useState('');
   const [Email, setEmail] =   useState('');
@@ -93,6 +78,22 @@ function CadastroJogador({ navigation }) {
         Cadastrar Jogaydor
       </Button>
 
+    </View>
+  );
+}
+
+function InfoJogador() {
+  return (
+    <View style={{ flex: 1 }}>
+      <ListarJogadores
+          style={{ borderWidth: 0.5, flex: 2 }}
+          image="https://placekitten.com/390/240"
+          title="Teste do primeiro gatinho"
+        >
+          <Text>Nome do Jogador</Text>
+          <Text>Info do jogardor</Text>
+        </ListarJogadores>
+        
     </View>
   );
 }
@@ -151,19 +152,29 @@ function ListaJogadores({ navigation }) {
   );
 }
 
-const Stack = createNativeStackNavigator();
+const JogadoresStack = createNativeStackNavigator();
+
+function JogadoresStackScreen() {
+  return (
+    <JogadoresStack.Navigator initialRouteName="ListaJogadores">
+      <JogadoresStack.Screen name="ListaJogadores" component={ListaJogadores} />
+      <JogadoresStack.Screen name="InfoJogador" component={InfoJogador} />
+    </JogadoresStack.Navigator>
+  );
+}
+
+const Tab = createBottomTabNavigator();
 
 function App() {
   return (
     <PaperProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="VisualizarEstatisticas" component={VisualizarEstatisticas} />
-          <Stack.Screen name="ListaJogadores" component={ListaJogadores} />
-          <Stack.Screen name="InfoJogador" component={InfoJogador} />
-          <Stack.Screen name="CadastroJogador" component={CadastroJogador} />
-        </Stack.Navigator>
+        <Tab.Navigator screenOptions={{ headerShown: false }}>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="CadastroJogador" component={CadastroJogador} />
+          <Tab.Screen name="VisualizarEstatisticas" component={VisualizarEstatisticas} />
+          <Tab.Screen name="Lista Jogadores" component={JogadoresStackScreen} />
+        </Tab.Navigator>
       </NavigationContainer>
     </PaperProvider>
   );
