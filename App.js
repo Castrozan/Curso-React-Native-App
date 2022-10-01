@@ -7,29 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import ListarJogadores from "./components/ListarJogadores"
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-
-      <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-      <Button mode="contained" /*onPress={() => navigation.navigate('VisualizarEstatisticas')}*/>
-        Ir para Visualizar Estatisticas
-      </Button>
-
-      <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained" /*onPress={() => navigation.navigate('ListaJogadores')}*/>
-        Ir para Lista de Jogadores
-      </Button>
-
-      <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained" /*onPress={() => navigation.navigate('CadastroJogador')}*/>
-        Ir para o Cadastro de Jogador
-      </Button>
-
-    </View>
-  );
-}
+import HomeScreen from './src/screen/HomeScreen';
+import LoginScreen from './src/screen/LoginScreen';
 
 function VisualizarEstatisticas() {
   return (
@@ -170,7 +149,8 @@ function App() {
     <PaperProvider>
       <NavigationContainer>
         <Tab.Navigator screenOptions={{ headerShown: false }}>
-          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="LoginScreen" component={LoginScreen} />
+          <Tab.Screen name="HomeScreen" component={HomeScreen} />
           <Tab.Screen name="CadastroJogador" component={CadastroJogador} />
           <Tab.Screen name="VisualizarEstatisticas" component={VisualizarEstatisticas} />
           <Tab.Screen name="Lista Jogadores" component={JogadoresStackScreen} />
