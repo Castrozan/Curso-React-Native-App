@@ -49,7 +49,7 @@ Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa 
 
 Tendo o Node.js instalado em sua máquina:
 
-`npm install -g expo-cli`
+`npm install`
 
 To usando o React Native Paper nessa versão, então instale ele. Link abaixo para documentação:
 https://callstack.github.io/react-native-paper/getting-started.html
