@@ -51,6 +51,8 @@ Tendo o Node.js instalado em sua máquina:
 
 `npm install`
 
+#### Caso precise instalar alguma coisa na mão siga os procedimentos abaixo
+
 To usando o React Native Paper nessa versão, então instale ele. Link abaixo para documentação:
 https://callstack.github.io/react-native-paper/getting-started.html
 
