@@ -1,12 +1,17 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function LoginScreen({ navigation }) {
     return (
       <View style={styles.container}>
+
+        <Image
+        style={styles.tinyLogo}
+        source={require('../../assets/images/logo1_png.png')}
+        />
 
         <Text style={styles.title}>Email</Text>
         <TextInput placeholder="Digite um email..." style={styles.input}/>
@@ -18,7 +23,7 @@ export default function LoginScreen({ navigation }) {
           Entrar
       </Button>
 
-        <Button style={styles.buttonRegistrar}>
+        <Button onPress={() => navigation.navigate('Cadastro')}>
           <Text style={styles.textRegistrar}>Não possui uma conta? Registre-se</Text>
         </Button>
       </View>
@@ -28,6 +33,7 @@ export default function LoginScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
     paddingStart: '10%',
     paddingEnd: '10%'
   },
@@ -54,6 +60,12 @@ const styles = StyleSheet.create({
 
   textRegistrar: {
     color: '#424345' 
+  },
+
+  tinyLogo: {
+    marginLeft: 80,
+    width: 150,
+    height: 150,
   }
   
 })
