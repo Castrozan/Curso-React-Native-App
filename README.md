@@ -94,6 +94,12 @@ Entre no diretório do projeto pelo CMD ou PowerShell e use:
 
 `npx expo start`
 
+### Conectando no git remoto (GitHub)
+
+```git remote add origin https://github.com/Castrozan/Curso-React-Native-App.git```
+
+
+
 ### Commitando alterações
 
 Garanta que você está no branch correto para commitar as alterações. Vamos fazer commit somente em nossa branch pessoal
@@ -109,6 +115,10 @@ Para visualizar as branchs do projeto use:
 Para trocar para algum branch, você deve usar o comando:
 
 `git checkout zlucas`
+
+Use o comando abaixo para selecionar tudo para commitar
+
+```git add *```
 
 Agora que você está na sua branch, deve ser capaz de realizar seu primeiro commit usando:
 
