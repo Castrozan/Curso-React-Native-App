@@ -1,181 +1,47 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
+// import { useState } from 'react';
+// import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import ListarJogadores from "./components/ListarJogadores"
+import HomeScreen from './src/screen/HomeScreen';
+import LoginScreen from './src/screen/LoginScreen';
+import CadastroJogador from './src/screen/CadastroJogador';
+import VisualizarEstatisticas from './src/screen/VisualizarEstatisticas';
+import InfoJogador from './src/screen/InfoJogador';
+import ListaJogadores from './src/screen/ListaJogadores';
+import Cadastro from './src/screen/Cadastro'
 
-function HomeScreen({ navigation }) {
+const JogadoresStack = createNativeStackNavigator();
+
+function JogadoresStackScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      
-      <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-      <Button mode="contained" onPress={() => navigation.navigate('VisualizarEstatisticas')}>
-        Ir para Visualizar Estatisticas
-      </Button>
-
-      <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained" onPress={() => navigation.navigate('ListaJogadores')}>
-        Ir para Lista de Jogadores
-      </Button>
-
-      <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained" onPress={() => navigation.navigate('CadastroJogador')}>
-        Ir para o Cadastro de Jogador
-      </Button>
-
-    </View>
+    <JogadoresStack.Navigator initialRouteName="ListaJogadores">
+      <JogadoresStack.Screen name="ListaJogadores" component={ListaJogadores} />
+      <JogadoresStack.Screen name="InfoJogador" component={InfoJogador} />
+    </JogadoresStack.Navigator>
   );
 }
 
-function VisualizarEstatisticas({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ marginBottom: 16 }}></Text>
-      <Button mode="contained">
-        Exportar Estatisticas
-      </Button>
-    </View>
-  );
-}
-
-function InfoJogador({ navigation }) {
-  return (
-    <View style={{ flex: 1 }}>
-      <ListarJogadores
-          style={{ borderWidth: 0.5, flex: 2 }}
-          image="https://placekitten.com/390/240"
-          title="Teste do primeiro gatinho"
-        >
-          <Text>Nome do Jogador</Text>
-          <Text>Info do jogardor</Text>
-        </ListarJogadores>
-        
-    </View>
-  );
-}
-
-function CadastroJogador({ navigation }) {
-
-  const [Nome, setNome] =   useState('');
-  const [Email, setEmail] =   useState('');
-  const [Posicao, setPosicao] =   useState('');
-
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      
-      <Text style={{ fontSize: 14 }}>Nome: </Text>
-      <TextInput
-        style={styles.input}
-        setFormData={Nome}
-        value={setNome.Nome}
-      />
-
-      <Text style={{ fontSize: 14 }}>Email: </Text>
-      <TextInput
-        style={styles.input}
-        setFormData={Email}
-        value={setEmail.Email}
-      />
-
-
-      <Text style={{ fontSize: 14 }}>Posicao: </Text>
-      <TextInput
-        style={styles.input}
-        setFormData={Posicao}
-        value={setPosicao.Posicao}
-      />
-
-      <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-      <Button mode="contained">
-        Cadastrar Jogaydor
-      </Button>
-
-    </View>
-  );
-}
-
-function ListaJogadores({ navigation }) {
-  return (
-    <View style={{ flex: 1 }}>
-      <ScrollView>
-
-        <ListarJogadores
-          style={{ borderWidth: 0.5, flex: 2 }}
-          image="https://placekitten.com/390/240"
-          title="Teste do primeiro gatinho"
-          buttonLabel="Informações do Jogador"
-          buttonPress={() => navigation.navigate('InfoJogador')}
-        >
-          <Text>Nome do Jogador</Text>
-          <Text>Info do jogardor</Text>
-        </ListarJogadores>
-
-        <ListarJogadores
-          style={{ borderWidth: 0.5, flex: 2 }}
-          image="https://placekitten.com/390/240"
-          title="Teste do primeiro gatinho"
-          buttonLabel="Informações do Jogador"
-          buttonPress={() => navigation.navigate('InfoJogador')}
-        >
-          <Text>Nome do Jogador</Text>
-          <Text>Info do jogardor</Text>
-        </ListarJogadores>
-
-        <ListarJogadores
-          style={{ borderWidth: 0.5, flex: 2 }}
-          image="https://placekitten.com/390/240"
-          title="Teste do primeiro gatinho"
-          buttonLabel="Informações do Jogador"
-          buttonPress={() => navigation.navigate('InfoJogador')}
-        >
-          <Text>Nome do Jogador</Text>
-          <Text>Info do jogardor</Text>
-        </ListarJogadores>
-
-        <ListarJogadores
-          style={{ borderWidth: 0.5, flex: 2 }}
-          image="https://placekitten.com/390/240"
-          title="Teste do primeiro gatinho"
-          buttonLabel="Informações do Jogador"
-          buttonPress={() => navigation.navigate('InfoJogador')}
-        >
-          <Text>Nome do Jogador</Text>
-          <Text>Info do jogardor</Text>
-        </ListarJogadores>
-
-      </ScrollView>  
-    </View>
-  );
-}
-
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function App() {
   return (
     <PaperProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="VisualizarEstatisticas" component={VisualizarEstatisticas} />
-          <Stack.Screen name="ListaJogadores" component={ListaJogadores} />
-          <Stack.Screen name="InfoJogador" component={InfoJogador} />
-          <Stack.Screen name="CadastroJogador" component={CadastroJogador} />
-        </Stack.Navigator>
+        <Tab.Navigator screenOptions={{ headerShown: false }}>
+          <Tab.Screen name="Cadastro" component={Cadastro} />
+          <Tab.Screen name="LoginScreen" component={LoginScreen} />
+          <Tab.Screen name="HomeScreen" component={HomeScreen} />
+          <Tab.Screen name="CadastroJogador" component={CadastroJogador} />
+          <Tab.Screen name="VisualizarEstatisticas" component={VisualizarEstatisticas} />
+          <Tab.Screen name="Lista Jogadores" component={JogadoresStackScreen} />
+        </Tab.Navigator>
       </NavigationContainer>
     </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
 
 export default App;
