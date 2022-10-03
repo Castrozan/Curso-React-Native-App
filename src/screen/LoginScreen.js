@@ -1,32 +1,32 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TextInput } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
-import { NavigationContainer } from '@react-navigation/native';
 
 export default function LoginScreen({ navigation }) {
     return (
-      <View style={styles.container}>
+      <PaperProvider>
+        <View style={styles.container}>
 
-        <Image
-        style={styles.tinyLogo}
-        source={require('../../assets/images/logo1_png.png')}
-        />
+          <Image
+          style={styles.tinyLogo}
+          source={require('../../assets/images/logo1_png.png')}
+          />
 
-        <Text style={styles.title}>Email</Text>
-        <TextInput placeholder="Digite um email..." style={styles.input}/>
+          <Text style={styles.title}>Email</Text>
+          <TextInput placeholder="Digite um email..." style={styles.input}/>
 
-        <Text style={styles.title}>Senha</Text>
-        <TextInput placeholder="Digite sua senha..." style={styles.input}/>
+          <Text style={styles.title}>Senha</Text>
+          <TextInput placeholder="Digite sua senha..." style={styles.input}/>
 
-        <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('HomeScreen')}>
-          Entrar
-      </Button>
-
-        <Button onPress={() => navigation.navigate('Cadastro')}>
-          <Text style={styles.textRegistrar}>Não possui uma conta? Registre-se</Text>
+          <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('HomeScreen')}>
+            Entrar
         </Button>
-      </View>
+
+          <Button onPress={() => navigation.navigate('Cadastro')}>
+            <Text style={styles.textRegistrar}>Não possui uma conta? Registre-se</Text>
+          </Button>
+        </View>
+      </PaperProvider>
     );
   }
 
