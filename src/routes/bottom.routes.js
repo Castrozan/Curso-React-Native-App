@@ -12,7 +12,7 @@ const { Screen, Navigator } = createBottomTabNavigator();
 
 export function BottomRoutes(){
     return(
-        <Navigator screenOptions={{ headerShown: false }} initialRouteName="HomeScreen">
+        <Navigator initialRouteName="HomeScreen" screenOptions={{ headerShown: false }} >
             <Screen name="Cadastro" component={Cadastro} />
             <Screen name="LoginScreen" component={LoginScreen} />
             <Screen name="HomeScreen" component={HomeScreen} />
