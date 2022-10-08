@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
+import { View, Text } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
 
 export default function HomeScreen() {

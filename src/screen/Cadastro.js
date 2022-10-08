@@ -1,35 +1,35 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TextInput } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
-import { NavigationContainer } from '@react-navigation/native';
 
 export default function CadastroScreen({ navigation }) {
 	return (
-	  <View style={styles.container}>
+    <PaperProvider>
+      <View style={styles.container}>
 
-        <Image
-        style={styles.tinyLogo}
-        source={require('../../assets/images/logo1_png.png')}
-        />
+          <Image
+          style={styles.tinyLogo}
+          source={require('../../assets/images/logo1_png.png')}
+          />
 
-      <Text style={styles.title}>Nome</Text>
-      <TextInput placeholder="Digite seu nome..." style={styles.input}/>
+        <Text style={styles.title}>Nome</Text>
+        <TextInput placeholder="Digite seu nome..." style={styles.input}/>
 
-      <Text style={styles.title}>Email</Text>
-      <TextInput placeholder="Digite um email..." style={styles.input}/>
+        <Text style={styles.title}>Email</Text>
+        <TextInput placeholder="Digite um email..." style={styles.input}/>
 
-      <Text style={styles.title}>Senha</Text>
-      <TextInput placeholder="Digite sua senha..." style={styles.input}/>
+        <Text style={styles.title}>Senha</Text>
+        <TextInput placeholder="Digite sua senha..." style={styles.input}/>
 
-      <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
-        Cadastrar
-      </Button>
+        <Button style={styles.button} mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
+          Cadastrar
+        </Button>
 
-		  <Button onPress={() => navigation.navigate('LoginScreen')}>
-          <Text style={styles.textRegistrar}>Já possui uma conta? Faça login</Text>
-      </Button>
-	  </View>
+        <Button onPress={() => navigation.navigate('LoginScreen')}>
+            <Text style={styles.textRegistrar}>Já possui uma conta? Faça login</Text>
+        </Button>
+      </View>
+    </PaperProvider>
 	);
 }
 
