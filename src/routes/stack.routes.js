@@ -5,10 +5,10 @@ import ListaJogadores from '../screen/ListaJogadores';
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
-export function StackRoutes(){
+export default function StackRoutes(){
     return(
         <Navigator screenOptions={{ headerShown: false }}>
-            <Screen name="Lista Jogadores" component={ListaJogadores} />
+            <Screen name="ListaJogadores" component={ListaJogadores} />
             <Screen name="InfoJogador" component={InfoJogador} />
         </Navigator>
     )

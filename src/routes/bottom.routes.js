@@ -18,7 +18,7 @@ export function BottomRoutes(){
             <Screen name="HomeScreen" component={HomeScreen} />
             <Screen name="CadastroJogador" component={CadastroJogador} />
             <Screen name="VisualizarEstatisticas" component={VisualizarEstatisticas} />
-            <Screen name="Lista Jogadores" component={StackRoutes} />
+            <Screen name="ListaJogadoresStack" component={StackRoutes} />
         </Navigator>
     )
 }

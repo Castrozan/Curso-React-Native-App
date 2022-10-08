@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 
 import EditarJogador from "../../components/EditarJogador"
 
 export default function InfoJogador() {
 
-    const [Gols, setGols] =   useState(0);
-    const [Passes, setPasses] = useState(0);
-    const [Faltas, setFaltas] = useState(0);
+    // const [Gols, setGols] =   useState(0);
+    // const [Passes, setPasses] = useState(0);
+    // const [Faltas, setFaltas] = useState(0);
 
     return (
       <View style={{ flex: 1 }}>
@@ -18,13 +18,13 @@ export default function InfoJogador() {
             title="Teste do primeiro gatinho"
             mode="contained"
             buttonLabel="Gols"
-            buttonPress={() => setGols(Gols + 1)}
+            // buttonPress={() => setGols(Gols + 1)}
         >
             <Text>Nome do Jogador</Text>
             <Text>Info do jogardor</Text>
-            <Text>Gols: { Gols }</Text>
+            {/* <Text>Gols: { Gols }</Text>
             <Text>Gols: { Passes }</Text>
-            <Text>Gols: { Faltas }</Text>
+            <Text>Gols: { Faltas }</Text> */}
         </EditarJogador>
           
       </View>
