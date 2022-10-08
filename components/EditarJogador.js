@@ -5,6 +5,7 @@ export default function EditarJogador({
   title,
   titleStyle,
   children,
+  buttonLabel,
   buttonPress,
   ...props
 }) {
@@ -13,11 +14,12 @@ export default function EditarJogador({
       {image && <Card.Cover source={{ uri: image }} />}
       <Card.Title titleStyle={titleStyle} title={title} />
       {children && <Card.Content>{children}</Card.Content>}
-      <Card.Actions>
-        <Button mode="contained" onPress={buttonPress}>
-          {buttonLabel}
-        </Button>
-      </Card.Actions>
+      <Card.Content>
+        {buttonLabel && <Button mode="contained" onPress={buttonPress}> {buttonLabel} </Button>}
+        {buttonLabel && <Button mode="contained" onPress={buttonPress}> {buttonLabel} </Button>}
+        {buttonLabel && <Button mode="contained" onPress={buttonPress}> {buttonLabel} </Button>}
+      </Card.Content>
     </Card>
   );
 }
+

@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
 
 export default function HomeScreen() {
+    
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   
@@ -13,12 +14,12 @@ export default function HomeScreen() {
         </Button>
   
         <Text style={{ marginBottom: 16 }}></Text>
-        <Button mode="contained" /*onPress={() => navigation.navigate('ListaJogadores')}*/>
+        <Button mode="contained">
           Ir para Lista de Jogadores
         </Button>
   
         <Text style={{ marginBottom: 16 }}></Text>
-        <Button mode="contained" /*onPress={() => navigation.navigate('CadastroJogador')}*/>
+        <Button mode="contained">
           Ir para o Cadastro de Jogador
         </Button>
   
