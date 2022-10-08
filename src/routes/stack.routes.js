@@ -7,7 +7,7 @@ const { Screen, Navigator } = createNativeStackNavigator();
 
 export default function StackRoutes(){
     return(
-        <Navigator screenOptions={{ headerShown: false }}>
+        <Navigator>
             <Screen name="ListaJogadores" component={ListaJogadores} />
             <Screen name="InfoJogador" component={InfoJogador} />
         </Navigator>

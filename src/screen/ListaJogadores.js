@@ -31,6 +31,17 @@ export default function ListaJogadores({ navigation }) {
               <Text>Nome do Jogador</Text>
               <Text>Info do jogardor</Text>
             </ListarJogadores>
+
+            <ListarJogadores
+              style={{ borderWidth: 0.5, flex: 2 }}
+              image="https://placekitten.com/390/240"
+              title="Teste do primeiro gatinho"
+              buttonLabel="Informações do Jogador"
+              buttonPress={() => navigation.navigate('InfoJogador')}
+            >
+              <Text>Nome do Jogador</Text>
+              <Text>Info do jogardor</Text>
+            </ListarJogadores>
     
           </ScrollView>  
         </View>
