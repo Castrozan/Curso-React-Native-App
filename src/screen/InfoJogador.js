@@ -1,72 +1,113 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Provider as PaperProvider } from 'react-native-paper';
-
-import EditarJogador from "../../components/EditarJogador"
+import { Button, Card, Title, TextInput } from 'react-native-paper';
+import { useState } from 'react';
 
 export default function InfoJogador() {
 
-    // const [Gols, setGols] =   useState(0);
-    // const [Passes, setPasses] = useState(0);
-    // const [Faltas, setFaltas] = useState(0);
+    const [Nome, setNome] =   useState('Haaland');
+    const [Posicao, setPosicao] = useState('Volante');
+    const [Pontos, setPontos] = useState(5);
+    const [Gols, setGols] = useState(6);
+    const [Assistencias, setAssistencias] = useState(7);
+    const [Jogos, setJogos] = useState(3);
+    const [Vitorias, setVitorias] = useState(6);
+    const [Derrotas, setDerrotas] = useState(7);
+    const [Empates, setEmpates] = useState(8);
 
     return (
-      <View style={{ flex: 1 }}>
-        <EditarJogador
-            style={{ borderWidth: 0.5, flex: 2 }}
-            image="https://placekitten.com/390/240"
-            title="Teste do primeiro gatinho"
-            mode="contained"
-            buttonLabel="Gols"
-            // buttonPress={() => setGols(Gols + 1)}
-        >
-            <Text>Nome do Jogador</Text>
-            <Text>Info do jogardor</Text>
-            {/* <Text>Gols: { Gols }</Text>
-            <Text>Gols: { Passes }</Text>
-            <Text>Gols: { Faltas }</Text> */}
-        </EditarJogador>
-          
+      <View style={{ backgroundColor: 'white'}}>
+
+        <Card>
+          <Card.Cover source={{ uri: 'http://cdn.espn.com.br/image/wide/622_f3a8b14d-4189-481b-8105-744259c38eaa.jpg' }} />
+          <Card.Title title={Nome} subtitle={Posicao} />
+        </Card>
+        
+        <View style={{
+            flexDirection: 'row',
+            height: 100,
+            padding: 10,
+            justifyContent: 'space-evenly',
+            backgroundColor: 'white'
+          }}>
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Pontos'}
+              value={''+ Pontos} 
+              onChangeText={setPontos} 
+              keyboardType='phone-pad'
+            />
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Gols'}
+              onChangeText={setGols} 
+              value={''+ Gols} 
+              keyboardType='phone-pad'
+            />
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Assistências'}
+              onChangeText={setAssistencias} 
+              value={''+ Assistencias} 
+              keyboardType='phone-pad'
+            />
+        </View>
+
+        <View style={{
+            flexDirection: 'row',
+            height: 100,
+            padding: 10,
+            justifyContent: 'space-evenly',
+          }}>
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Jogos'}
+              onChangeText={setJogos} 
+              value={''+ Jogos} 
+              keyboardType='phone-pad'
+            />
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Vitórias'}
+              onChangeText={setVitorias} 
+              value={''+ Vitorias} 
+              keyboardType='phone-pad'
+            />
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Derrotas'}
+              onChangeText={setDerrotas} 
+              value={''+ Derrotas} 
+              keyboardType='phone-pad'
+            />
+        </View>
+
+        <View style={{
+            flexDirection: 'row',
+            height: 100,
+            padding: 10,
+            justifyContent: 'space-evenly',
+          }}>
+            <TextInput 
+              style={styles.inputStyle} 
+              label={'Empates'}
+              onChangeText={setEmpates} 
+              value={''+ Empates} 
+              keyboardType='phone-pad'
+            />
+        </View>
+
       </View>
     );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingStart: '10%',
-    paddingEnd: '10%'
+  inputStyle: {
+    borderColor: 'gray',
+    width: 100,
+    height: 75,
+    borderWidth: 0,
+    borderRadius: 0,
+    padding: 0,
   },
-  
-  title: {
-    fontSize: 20,
-    marginTop: 30,
-    color: '#585959'
-  },
-
-  input: {
-    borderBottomWidth: 1,
-    height: 40,
-    marginBottom: 12,
-    fontSize: 16
-  },
-  
-  button: {
-    backgroundColor: '#41825f',
-    marginStart: '10%',
-    marginEnd: '10%',
-    marginTop: '5%'
-  },
-
-  textRegistrar: {
-    color: '#424345' 
-  },
-
-  tinyLogo: {
-    marginLeft: 80,
-    width: 150,
-    height: 150,
-  }
-  
-})
+});
