@@ -2,6 +2,7 @@
 
 Curso de criação de aplicativo em React Native
 
+
 ## Instalar e usar o Git
 
 Primeiro vamos instalar o Chocolatey como gerenciador de pacotes para usar na instalação do Git
@@ -23,6 +24,7 @@ Por fim instale o Git com:
 
 `choco install git`
 
+
 ### Configurar o Git na máquina
 
 Use os comandos abaixo caso o git fique puto e não te deixe fazer nada sem dar erro:
@@ -30,6 +32,7 @@ Use os comandos abaixo caso o git fique puto e não te deixe fazer nada sem dar 
 `git config --global user.name "Fulano de Tal"`
 
 `git config --global user.email fulanodetal@exemplo.br`
+
 
 ### Clonar o repositório
 
@@ -45,17 +48,21 @@ Após isso você pode conectar o git remoto ao diretório
 
 `git remote add origin https://github.com/Castrozan/Curso-React-Native-App.git`
 
+
 ### Atualizar o repositório da sua máquina
 
 Caso você queira copntinuar escrevendo o prjeto em uma versão antiga dele, use o comando abaixo para atualizar o projeto
 
-`git pull origin master` Irá atualizar o branch que você está atualmente com a master
-
-ou
-
-`git fetch --all` para atualizar o projeto todo com as versões mais recentes de todas as branches
+`git pull` Irá atualizar o branch que você está atualmente com a master
 
 > Caso você queira baixar o projeto pra máquina novamente em um novo repositório clone o repositório e adicione o repositório remoto
+
+ O comando abaixo irá trazer o branch z2lucas para a sua máquina.
+
+`git pull origin z2lucas`
+
+Tentei o `git fetch --all` mas não tá rolando :/
+
 
 ### Commitando alterações
 
@@ -98,6 +105,7 @@ Utilize o comando abaixo para enviar seu commit para o GitHub
 `git push origin zlucas`
 
 #### Agora suas alterações já devem estar registradas no repositório no GitHub. Parabéns! 🎊
+
 
 ## Setup do projeto
 
@@ -147,6 +155,7 @@ Na sequencia devemos adicionar também nosso primeiro tipo de "navegador" / "mod
 Na sequencia recomendo seguirmos este guia aqui:
 
 https://reactnavigation.org/docs/hello-react-navigation
+
 
 ## Inicializando o projeto
 
