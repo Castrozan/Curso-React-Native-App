@@ -2,7 +2,7 @@
 
 Curso de criação de aplicativo em React Native
 
-## Instalar o Git Cli
+## Instalar e usar o Git
 
 Primeiro vamos instalar o Chocolatey como gerenciador de pacotes para usar na instalação do Git
 
@@ -41,66 +41,21 @@ Em um diretório do projeto, mas desatualizado, puxe as atualizações mais rece
 
 `git pull https://github.com/Castrozan/Curso-React-Native-App.git`
 
-## Setup do projeto
+Após isso você pode conectar o git remoto ao diretório
 
-Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa e atualizando isso aqui pra que todos tenham as mesmas dependencias na hr de editar o projeto
+`git remote add origin https://github.com/Castrozan/Curso-React-Native-App.git`
 
-### Configurando, instalando as dependências do App
+### Atualizar o repositório da sua máquina
 
-Tendo o Node.js instalado em sua máquina:
+Caso você queira copntinuar escrevendo o prjeto em uma versão antiga dele, use o comando abaixo para atualizar o projeto
 
-`npm install`
+`git pull origin master` Irá atualizar o branch que você está atualmente com a master
 
-#### Caso precise instalar alguma coisa na mão siga os procedimentos abaixo
+ou
 
-To usando o React Native Paper nessa versão, então instale ele. Link abaixo para documentação:
-https://callstack.github.io/react-native-paper/getting-started.html
+`git pull` para atualizar o projeto todo com as versões mais recentes de todas as branches
 
-```npm install react-native-paper@5.0.0-rc.5```
-
-e depois configurar o arquivo `babel.config.js` assim:
-
-```js
-module.exports = function(api) {
-  api.cache(true);
-  return {
-    presets: ['babel-preset-expo'],
-    env: {
-      production: {
-        plugins: ['react-native-paper/babel'],
-      },
-    },
-  };
-};
-```
-
-To usando o `react-navigation` também, então, pode instalar.
-
-`npm install @react-navigation/native`
-
-E depois:
-
-`npx expo install react-native-screens react-native-safe-area-context`
-
-Na sequencia devemos adicionar também nosso primeiro tipo de "navegador" / "modelo de navegação":
-
-`npm install @react-navigation/native-stack`
-
-Na sequencia recomendo seguirmos este guia aqui:
-
-https://reactnavigation.org/docs/hello-react-navigation
-
-### Inicializando o projeto
-
-Entre no diretório do projeto pelo CMD ou PowerShell e use:
-
-`npx expo start`
-
-### Conectando no git remoto (GitHub)
-
-```git remote add origin https://github.com/Castrozan/Curso-React-Native-App.git```
-
-
+> Caso você queira baixar o projeto pra máquina novamente em um novo repositório clone o repositório e adicione o repositório remoto
 
 ### Commitando alterações
 
@@ -120,7 +75,7 @@ Para trocar para algum branch, você deve usar o comando:
 
 Use o comando abaixo para selecionar tudo para commitar
 
-```git add *```
+`git add *`
 
 Agora que você está na sua branch, deve ser capaz de realizar seu primeiro commit usando:
 
@@ -147,6 +102,57 @@ Utilize o comando abaixo para enviar seu commit para o GitHub
 ## Setup do projeto
 
 Seguir os passos abaixo pra instalar as dependencias. Vamos Vendo o que precisa e atualizando isso aqui pra que todos tenham as mesmas dependencias na hr de editar o projeto
+
+### Configurando, instalando as dependências do App
+
+Tendo o Node.js instalado em sua máquina:
+
+`npm install`
+
+#### Caso precise instalar alguma coisa na mão siga os procedimentos abaixo
+
+To usando o React Native Paper nessa versão, então instale ele. Link abaixo para documentação:
+https://callstack.github.io/react-native-paper/getting-started.html
+
+`npm install react-native-paper@5.0.0-rc.5`
+
+e depois configurar o arquivo `babel.config.js` assim:
+
+```js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ["babel-preset-expo"],
+    env: {
+      production: {
+        plugins: ["react-native-paper/babel"],
+      },
+    },
+  };
+};
+```
+
+To usando o `react-navigation` também, então, pode instalar.
+
+`npm install @react-navigation/native`
+
+E depois:
+
+`npx expo install react-native-screens react-native-safe-area-context`
+
+Na sequencia devemos adicionar também nosso primeiro tipo de "navegador" / "modelo de navegação":
+
+`npm install @react-navigation/native-stack`
+
+Na sequencia recomendo seguirmos este guia aqui:
+
+https://reactnavigation.org/docs/hello-react-navigation
+
+## Inicializando o projeto
+
+Entre no diretório do projeto pelo CMD ou PowerShell e use:
+
+`npx expo start`
 
 ### Configurando, instalando as dependências do App
 
