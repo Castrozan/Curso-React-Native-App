@@ -53,7 +53,7 @@ Caso você queira copntinuar escrevendo o prjeto em uma versão antiga dele, use
 
 ou
 
-`git pull` para atualizar o projeto todo com as versões mais recentes de todas as branches
+`git fetch --all` para atualizar o projeto todo com as versões mais recentes de todas as branches
 
 > Caso você queira baixar o projeto pra máquina novamente em um novo repositório clone o repositório e adicione o repositório remoto
 
