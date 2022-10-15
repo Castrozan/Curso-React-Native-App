@@ -63,6 +63,9 @@ Caso você queira copntinuar escrevendo o prjeto em uma versão antiga dele, use
 
 Tentei o `git fetch --all` mas não tá rolando :/
 
+Para visualizar as branchs do projeto remoto use:
+
+`git branch -a`
 
 ### Commitando alterações
 
@@ -72,7 +75,7 @@ Garanta que você está no branch correto para commitar as alterações. Vamos f
 2. Lucas Borba -> Branch blucas
 3. Gabriele -> Branch gabi
 
-Para visualizar as branchs do projeto use:
+Para visualizar as branchs do projeto na sua máquina use:
 
 `git branch`
 
@@ -86,7 +89,7 @@ Use o comando abaixo para selecionar tudo para commitar
 
 Agora que você está na sua branch, deve ser capaz de realizar seu primeiro commit usando:
 
-> ATENÇÃO: nunca esquerça de usar o `git pull` antes de commitar
+> ATENÇÃO: nunca esquerça de usar o `git pull` antes começar a trabalhar no projeto
 
 `git commit -m "Comentário top do commit"`
 
