@@ -18,7 +18,7 @@ export default function ListaJogadores({ navigation }) {
               buttonPress={() => navigation.navigate('InfoJogador')}
             >
               <Text>Nome do Jogador</Text>
-              <Text>Info do jogardor</Text>
+              <Text>Info do jogador</Text>
             </ListarJogadores>
     
             <ListarJogadores
@@ -29,7 +29,7 @@ export default function ListaJogadores({ navigation }) {
               buttonPress={() => navigation.navigate('InfoJogador')}
             >
               <Text>Nome do Jogador</Text>
-              <Text>Info do jogardor</Text>
+              <Text>Info do jogador</Text>
             </ListarJogadores>
 
             <ListarJogadores
@@ -40,7 +40,7 @@ export default function ListaJogadores({ navigation }) {
               buttonPress={() => navigation.navigate('InfoJogador')}
             >
               <Text>Nome do Jogador</Text>
-              <Text>Info do jogardor</Text>
+              <Text>Info do jogador</Text>
             </ListarJogadores>
     
           </ScrollView>  

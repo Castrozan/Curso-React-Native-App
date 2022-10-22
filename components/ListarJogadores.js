@@ -1,4 +1,6 @@
 import { Card, Button } from "react-native-paper";
+import { StyleSheet } from 'react-native';
+
 
 export default function ListarJogadores({
   image,
@@ -15,8 +17,18 @@ export default function ListarJogadores({
       <Card.Title titleStyle={titleStyle} title={title} />
       {children && <Card.Content>{children}</Card.Content>}
       <Card.Content>
-        {buttonLabel && <Button mode="contained" onPress={buttonPress}> {buttonLabel} </Button>}
+        {buttonLabel && <Button style={styles.button} mode="contained" onPress={buttonPress}> {buttonLabel} </Button>}
       </Card.Content>
     </Card>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#41825f',
+    marginStart: '10%',
+    marginEnd: '10%',
+    marginTop: '5%'
+  }
+
+})

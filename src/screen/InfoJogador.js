@@ -103,11 +103,13 @@ export default function InfoJogador() {
 
 const styles = StyleSheet.create({
   inputStyle: {
-    borderColor: 'gray',
+    borderColor: 'white',
+    backgroundColor: 'white',
     width: 100,
     height: 75,
     borderWidth: 0,
     borderRadius: 0,
     padding: 0,
   },
+  
 });
