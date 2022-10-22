@@ -1,27 +1,49 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { Provider as PaperProvider, Button } from 'react-native-paper';
+import * as React from "react";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { Provider as PaperProvider, Button } from "react-native-paper";
+
+import ListarJogadores from "../../components/ListarJogadores";
 
 export default function HomeScreen() {
-    
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-  
-        <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-        <Button mode="contained" /*onPress={() => navigation.navigate('VisualizarEstatisticas')}*/>
-          Ir para Visualizar Estatisticas
-        </Button>
-  
-        <Text style={{ marginBottom: 16 }}></Text>
-        <Button mode="contained">
-          Ir para Lista de Jogadores
-        </Button>
-  
-        <Text style={{ marginBottom: 16 }}></Text>
-        <Button mode="contained">
-          Ir para o Cadastro de Jogador
-        </Button>
-  
+  return (
+    <PaperProvider>
+      <View style={{ flex: 1 }}>
+        <ScrollView>
+          <ListarJogadores
+            style={{ borderWidth: 0.5, flex: 2, height: "20%" }}
+            image="http://cdn.espn.com.br/image/wide/622_f3a8b14d-4189-481b-8105-744259c38eaa.jpg"
+            title="Primeiro colocado"
+          >
+            <Text>Nome do Jogador</Text>
+            <Text>Posição</Text>
+          </ListarJogadores>
+
+          <ListarJogadores
+            style={{ borderWidth: 0.5, flex: 2 }}
+            image="http://cdn.espn.com.br/image/wide/622_f3a8b14d-4189-481b-8105-744259c38eaa.jpg"
+            title="Segundo colocado"
+          >
+            <Text>Nome do Jogador</Text>
+            <Text>Posição</Text>
+          </ListarJogadores>
+
+          <ListarJogadores
+            style={{ borderWidth: 0.5, flex: 2 }}
+            image="http://cdn.espn.com.br/image/wide/622_f3a8b14d-4189-481b-8105-744259c38eaa.jpg"
+            title="Terceiro colocado"
+          >
+            <Text>Nome do Jogador</Text>
+            <Text>Posição</Text>
+          </ListarJogadores>
+        </ScrollView>
       </View>
-    );
-  }
+    </PaperProvider>
+  );
+}
+
+const styles = StyleSheet.create({
+  bannerstyle: {
+    width: 500,
+    height: 200,
+  },
+});
