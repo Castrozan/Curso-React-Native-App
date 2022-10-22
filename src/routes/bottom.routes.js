@@ -4,6 +4,7 @@ import HomeScreen from "../screen/HomeScreen";
 import LoginScreen from "../screen/LoginScreen";
 import CadastroJogador from "../screen/CadastroJogador";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Cadastro from  '../screen/Cadastro';
 
 import StackRoutes from "./stack.routes";
 
@@ -23,6 +24,15 @@ export function BottomRoutes() {
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
         }}
+      />
+      <Screen name="Cadastro" 
+        component={Cadastro}
+        options={{
+          tabBarLabel: 'Cadastro',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="text-box-plus-outline" color={color} size={26} />
+          ),
+        }} 
       />
       <Screen name="HomeScreen" 
         component={HomeScreen}

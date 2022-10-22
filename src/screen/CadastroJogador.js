@@ -45,10 +45,10 @@ export default function CadastroJogador() {
 
   const styles = StyleSheet.create({
     input: {
+      borderBottomWidth: 1,
       height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
+      marginBottom: 12,
+      fontSize: 16
     },
 
     container: {
