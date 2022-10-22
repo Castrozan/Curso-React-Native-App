@@ -10,7 +10,7 @@ export default function CadastroJogador() {
 
     return (
       <PaperProvider>
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.container}>
 
           <Text style={{ fontSize: 14 }}>Nome: </Text>
           <TextInput
@@ -26,7 +26,6 @@ export default function CadastroJogador() {
             value={setEmail.Email}
           />
     
-    
           <Text style={{ fontSize: 14 }}>Posicao: </Text>
           <TextInput
             style={styles.input}
@@ -35,8 +34,8 @@ export default function CadastroJogador() {
           />
     
           <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-          <Button mode="contained">
-            Cadastrar Jogaydor
+          <Button style={styles.button} mode="contained">
+            Cadastrar Jogador
           </Button>
     
         </View>
@@ -50,5 +49,19 @@ export default function CadastroJogador() {
       margin: 12,
       borderWidth: 1,
       padding: 10,
+    },
+
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      paddingStart: '10%',
+      paddingEnd: '10%'
+    },
+
+    button: {
+      backgroundColor: '#41825f',
+      marginStart: '10%',
+      marginEnd: '10%',
+      marginTop: '5%'
     },
   });
