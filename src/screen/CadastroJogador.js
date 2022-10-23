@@ -2,10 +2,9 @@ import * as React from 'react';
 import { useState } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { Provider as PaperProvider, Button } from 'react-native-paper';
-
+import { jogador } from '../../basic-storage/storingData';
 export default function CadastroJogador() {
     const [Nome, setNome] =   useState('');
-    const [Email, setEmail] =   useState('');
     const [Posicao, setPosicao] =   useState('');
 
     return (
@@ -15,26 +14,18 @@ export default function CadastroJogador() {
           <Text style={{ fontSize: 14 }}>Nome: </Text>
           <TextInput
             style={styles.input}
-            setFormData={Nome}
-            value={setNome.Nome}
+            value={Nome}
+            onChangeText={setNome}
           />
-    
-          <Text style={{ fontSize: 14 }}>Email: </Text>
-          <TextInput
-            style={styles.input}
-            setFormData={Email}
-            value={setEmail.Email}
-          />
-    
           <Text style={{ fontSize: 14 }}>Posicao: </Text>
           <TextInput
             style={styles.input}
-            setFormData={Posicao}
-            value={setPosicao.Posicao}
+            value={Posicao}
+            onChangeText={setPosicao}
           />
     
           <Text style={{ fontSize: 21, marginBottom: 16 }}></Text>
-          <Button style={styles.button} mode="contained">
+          <Button style={styles.button} mode="contained" onPress={()=>jogador(Nome, Posicao)}>
             Cadastrar Jogador
           </Button>
     

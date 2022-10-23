@@ -1,50 +1,20 @@
 import * as React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
-
+import { getJogadores } from '../../basic-storage/storingData';
 import ListarJogadores from "../../components/ListarJogadores"
-
+import { useEffect, useState } from 'react';
 export default function ListaJogadores({ navigation }) {
+  const [lista, setLista] = useState([])
+  useEffect(()=>{
+    getJogadores.listar().then(
+      (result)=>{setLista(JSON.stringify(result))
+        console.log(lista)
+      })
+  }, [])
     return (
-      <PaperProvider>
         <View style={{ flex: 1 }}>
-          <ScrollView>
-    
-            <ListarJogadores
-              style={{ borderWidth: 0.5, flex: 2 }}
-              image="https://placekitten.com/390/240"
-              title="Teste do primeiro gatinho"
-              buttonLabel="Informações do Jogador"
-              buttonPress={() => navigation.navigate('InfoJogador')}
-            >
-              <Text>Nome do Jogador</Text>
-              <Text>Info do jogador</Text>
-            </ListarJogadores>
-    
-            <ListarJogadores
-              style={{ borderWidth: 0.5, flex: 2 }}
-              image="https://placekitten.com/390/240"
-              title="Teste do primeiro gatinho"
-              buttonLabel="Informações do Jogador"
-              buttonPress={() => navigation.navigate('InfoJogador')}
-            >
-              <Text>Nome do Jogador</Text>
-              <Text>Info do jogador</Text>
-            </ListarJogadores>
-
-            <ListarJogadores
-              style={{ borderWidth: 0.5, flex: 2 }}
-              image="https://placekitten.com/390/240"
-              title="Teste do primeiro gatinho"
-              buttonLabel="Informações do Jogador"
-              buttonPress={() => navigation.navigate('InfoJogador')}
-            >
-              <Text>Nome do Jogador</Text>
-              <Text>Info do jogador</Text>
-            </ListarJogadores>
-    
-          </ScrollView>  
+            <Text>{lista}</Text>
         </View>
-      </PaperProvider>
     );
   }
